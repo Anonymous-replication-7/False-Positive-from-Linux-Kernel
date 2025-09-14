@@ -1,0 +1,22 @@
+{
+    "v4l-dvb": 3,
+    "Virtualization": 2,
+    "Tracing/Profiling": 6,
+    "Tools": 39,
+    "Timers": 1,
+    "Security": 31,
+    "SCSI Drivers": 1,
+    "Process Management": 1,
+    "Power Management": 10,
+    "Platform Specific/Hardware": 13,
+    "Other": 7,
+    "Networking": 11,
+    "Memory Management": 6,
+    "Kernel Core": 21,
+    "IO/Storage": 9,
+    "File System": 42,
+    "Drivers": 85,
+    "Documentation": 2,
+    "Alternate Trees": 2,
+    "ACPI": 11
+}

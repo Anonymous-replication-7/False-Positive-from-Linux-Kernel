@@ -1,0 +1,17 @@
+Definitions:
+- Genuine bug report: Describes behavior that plausibly stems from a defect in Linux kernel code under valid usage. It is not primarily due to external environment, tool noise, misconfiguration, or user-space misuse.
+- False-positive bug report: Describes behavior that likely does NOT stem from a kernel defect. Reports that are purely environmental or misunderstandings of expected behavior count as false positives.
+
+Input:
+- Issue title: "{ISSUE_TITLE}"
+- Issue description: "{ISSUE_DESCRIPTION}"
+- Issue component: "{ISSUE_COMPONENT}"
+
+Task:
+Classify the report as either "Genuine_Bug" or "False_Positive" based on the title and description. Then provide a very brief justification (one sentence) citing the key cue(s) that led you to the decision. If uncertain, choose the more likely class.
+
+Output (JSON):
+{{
+  "label": "<Genuine_Bug | False_Positive>",
+  "justification": "<one-sentence reason>"
+}}

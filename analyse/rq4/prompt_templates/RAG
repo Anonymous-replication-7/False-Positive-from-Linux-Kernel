@@ -1,0 +1,60 @@
+Definitions:
+- Genuine bug report: 
+  A report that plausibly describes incorrect, unintended, or harmful behavior caused by Linux kernel code. 
+  Typical indicators include: kernel crash, panic, oops, hang, deadlock, memory corruption, data race, unexpected kernel-level behavior under valid use. 
+  The defect originates from kernel logic, concurrency, synchronization, or memory management flaws. 
+
+- False-positive bug report: 
+  A report that does not indicate a defect in the Linux kernel itself. 
+  Common causes include:
+  - 1. Incorrect Environment Configuration
+      - 1.1 Hardware Environment Configuration
+      - 1.2 Software Environment Configuration
+  - 2. Incorrect usage
+      - 2.1 Unsupported Usage
+      - 2.2 Inappropriate Tools
+      - 2.3 Incorrect Operation
+  - 3. Misunderstanding of features or limitations
+      -3.1 Limitation Unawareness
+      -3.2 Semantic Misunderstanding
+      -3.3 Implicit Behaviour Misunderstanding
+  - 4. External Dependency Issues
+      - 5.1 Outdated Firmware or Firmware Issues
+      - 5.2 Userspace Dependency Issues
+  - 5. Concurrency and Timing Effects
+  - 6. Typo
+
+
+- Notices:
+    For driver-related issues, carefully examine whether the report may stem from user-side misconfigurations, hardware malfunctions, or vendor-specific conditions.
+    For file system–related issues, consider whether the report reflects a misunderstanding of features or limitations, such as attempts to use features not supported in the current version.
+  
+    
+---
+
+### Example of Genuine Bug
+Issue title: "{EXAMPLE_TITLE_1}"
+Issue description: "{EXAMPLE_DESCRIPTION_1}"
+
+---
+
+### Example of False Positive
+Issue title: "{EXAMPLE_TITLE_2}"
+Issue description: "{EXAMPLE_DESCRIPTION_2}"
+
+---
+
+### New Input
+Issue title: "{ISSUE_TITLE}"
+Issue description: "{ISSUE_DESCRIPTION}"
+Issue component: "{ISSUE_COMPONENT}"
+
+Task:
+Classify this new report as either "Genuine_Bug" or "False_Positive". 
+Provide a one-sentence justification.
+
+Output (JSON):
+{{
+  "label": "<Genuine_Bug | False_Positive>",
+  "justification": "<one-sentence reason>"
+}}

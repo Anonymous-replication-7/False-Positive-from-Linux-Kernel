@@ -1,0 +1,41 @@
+{
+    "Drivers": {
+        "External Dependency Issues": 53,
+        "3. Misunderstanding of Features or Limitations": 33,
+        "1. Incorrect Environment Configuration": 22,
+        "2. Incorrect Usage": 3
+    },
+    "File System": {
+        "3. Misunderstanding of Features or Limitations": 65,
+        "External Dependency Issues": 26,
+        "1. Incorrect Environment Configuration": 8,
+        "2. Incorrect Usage": 6
+    },
+    "IO/Storage": {
+        "External Dependency Issues": 14,
+        "3. Misunderstanding of Features or Limitations": 8
+    },
+    "Kernel Core": {
+        "External Dependency Issues": 19,
+        "2. Incorrect Usage": 2,
+        "3. Misunderstanding of Features or Limitations": 15,
+        "1. Incorrect Environment Configuration": 3
+    },
+    "Networking": {
+        "External Dependency Issues": 18,
+        "3. Misunderstanding of Features or Limitations": 20,
+        "2. Incorrect Usage": 1
+    },
+    "Security": {
+        "2. Incorrect Usage": 2,
+        "External Dependency Issues": 24,
+        "3. Misunderstanding of Features or Limitations": 4,
+        "1. Incorrect Environment Configuration": 2
+    },
+    "Tools": {
+        "External Dependency Issues": 19,
+        "3. Misunderstanding of Features or Limitations": 15,
+        "1. Incorrect Environment Configuration": 5,
+        "2. Incorrect Usage": 3
+    }
+}

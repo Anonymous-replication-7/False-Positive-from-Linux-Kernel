@@ -1,0 +1,54 @@
+Definitions:
+- Genuine bug report: 
+  A report that plausibly describes incorrect, unintended, or harmful behavior caused by Linux kernel code. 
+  Typical indicators include: kernel crash, panic, oops, hang, deadlock, memory corruption, data race, unexpected kernel-level behavior under valid use. 
+  The defect originates from kernel logic, concurrency, synchronization, or memory management flaws. 
+
+- False-positive bug report: 
+  A report that does not indicate a defect in the Linux kernel itself. 
+  Common causes include:
+  - Incorrect environment configuration
+      - Hardware configuration
+      - Software configuration
+      - Mixed configuration
+  - Incorrect usage
+      - Unsupported usage
+      - Inappropriate tools
+      - Incorrect Operation
+  - Misunderstanding of features or limitations
+  - Concurrency and Timing Effects
+  - External Dependency Issues
+      - Outdated or missing firmware versions
+      - Known issues in user-space dependency libraries
+      - Userspace Dependency Issues
+  - Typo
+
+- Notices:
+    For driver-related issues, carefully examine whether the report may stem from user-side misconfigurations, hardware malfunctions, or vendor-specific conditions.
+    For file system–related issues, consider whether the report reflects a misunderstanding of features or limitations, such as attempts to use features not supported in the current version.
+ 
+
+Reasoning steps:
+(1) Component Analysis: Consider the subsystem where the issue is reported. Driver-related reports in Bugzilla have historically contained a relatively higher share of false positives, suggesting the need for careful scrutiny of this category.
+(2) Dependency Consideration: Reflect on whether the report references userspace dependencies, external packages, or environmental factors. Such contexts are often associated with spurious reports, though genuine bugs may still arise under complex configurations.
+(3) Feature Interpretation: Examine whether the report reflects a misunderstanding of intended functionality or implicit system behavior. This pattern frequently appears in false positives, yet distinguishing it from subtle design flaws requires nuanced judgment.
+(4) Integrative Reflection: Weigh the above aspects holistically. Rather than treating any single factor as determinative, use them as interpretive cues to reason about the plausibility of the report being a genuine bug or a false positive.
+
+ 
+
+Input:
+- Issue title: "{ISSUE_TITLE}"
+- Issue description: "{ISSUE_DESCRIPTION}"
+- Issue component: "{ISSUE_COMPONENT}"
+
+
+
+Task:
+Fill in each reasoning step briefly, then classify the report. 
+Provide label and a one-sentence justification as result.
+
+Output (JSON):
+{{
+  "label": "<Genuine_Bug | False_Positive>",
+  "justification": "<one-sentence reason>"
+}}

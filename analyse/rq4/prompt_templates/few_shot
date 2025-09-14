@@ -1,0 +1,55 @@
+Definitions:
+- Genuine bug report: 
+  A report that describes incorrect behavior caused by Linux kernel code. 
+
+- False-positive bug report: 
+  A report that does not indicate a defect in the Linux kernel itself. 
+  Common causes include:
+  - Incorrect environment configuration
+      - Hardware configuration
+      - Software configuration
+      - Mixed configuration
+  - Incorrect usage
+      - Unsupported usage
+      - Inappropriate tools
+      - Incorrect Operation
+  - Misunderstanding of features or limitations
+  - Concurrency and Timing Effects
+  - External Dependency Issues
+      - Outdated or missing firmware versions
+      - Known issues in user-space dependency libraries
+      - Userspace Dependency Issues
+  - Typo
+  
+- Notices:
+    For driver-related issues, carefully examine whether the report may stem from user-side misconfigurations, hardware malfunctions, or vendor-specific conditions.
+    For file system–related issues, consider whether the report reflects a misunderstanding of features or limitations, such as attempts to use features not supported in the current version.
+ 
+---
+
+### Example of Genuine Bug
+Issue title: "{EXAMPLE_TITLE_1}"
+Issue description: "{EXAMPLE_DESCRIPTION_1}"
+
+---
+
+### Example of False Positive
+Issue title: "{EXAMPLE_TITLE_2}"
+Issue description: "{EXAMPLE_DESCRIPTION_2}"
+
+---
+
+### New Input
+Issue title: "{ISSUE_TITLE}"
+Issue description: "{ISSUE_DESCRIPTION}"
+
+Task:
+Classify this new report as either "Genuine_Bug" or "False_Positive". 
+Provide a one-sentence justification.
+
+
+Output (JSON):
+{{
+  "label": "<Genuine_Bug | False_Positive>",
+  "justification": "<one-sentence reason>"
+}}

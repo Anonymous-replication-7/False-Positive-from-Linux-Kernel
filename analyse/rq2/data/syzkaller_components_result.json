@@ -1,0 +1,16 @@
+{
+    "Virtualization": 6,
+    "Tracing/Profiling": 5,
+    "Tools": 3,
+    "Security": 1,
+    "Process Management": 1,
+    "Power Management": 1,
+    "Platform Specific/Hardware": 3,
+    "Other": 16,
+    "Networking": 28,
+    "Memory Management": 10,
+    "Kernel Core": 18,
+    "IO/Storage": 13,
+    "File System": 63,
+    "Drivers": 26
+}
